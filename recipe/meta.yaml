@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/conquer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/conquer/conquer_{{ version }}.tar.gz
-  sha256: 6b93f824697b35ad76a4330c79fb4fe05c97dce130e7c8da2aaa5efdf869f1b0
+  sha256: 542f6154ce1ffec0c1b4dd4e1f5b86545015f4b378c4c66a0840c65c57d674ff
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [r_base == "3.5.1"]
   rpaths:
     - lib/R/lib/
@@ -59,12 +59,10 @@ test:
 about:
   home: https://github.com/XiaoouPan/conquer
   license: GPL-3.0-only
-  summary: Fast and accurate convolution-type smoothed quantile regression. Implemented using
-    Barzilai-Borwein gradient descent with a Huber regression warm start. Construct
-    confidence intervals for regression coefficients using multiplier bootstrap.
+  summary: Fast and accurate convolution-type smoothed quantile regression. Implemented using Barzilai-Borwein gradient descent with a Huber regression warm start. Construct confidence intervals for regression coefficients using multiplier bootstrap.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
