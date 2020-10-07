@@ -14,8 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
-  skip: true  # [r_base == "3.5.1"]
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,7 +33,7 @@ requirements:
   host:
     - _openmp_mutex                # [linux]
     - llvm-openmp                  # [osx]
-    - libopenblas
+    - libblas
     - r-base
     - r-matrix
     - r-rcpp >=1.0.3
@@ -43,7 +42,6 @@ requirements:
   run:
     - _openmp_mutex                # [linux]
     - llvm-openmp                  # [osx]
-    - libopenblas
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-matrix
