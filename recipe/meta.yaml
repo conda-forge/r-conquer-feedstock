@@ -1,4 +1,4 @@
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/conquer_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/conquer/conquer_{{ version }}.tar.gz
-  sha256: 1354f90f962a2124e155227cdc0ed2c6e54682f1e08934c49a827e51dc112f45
+  sha256: 8869883329dfd20e62410209c473e45b75f6f1c6f0a8f7388b76f7cc3ab907fc
 
 build:
   merge_build_host: true  # [win]
