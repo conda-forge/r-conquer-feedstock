@@ -1,11 +1,22 @@
+About r-conquer-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-conquer-feedstock/blob/main/LICENSE.txt)
+
 About r-conquer
-===============
+---------------
 
 Home: https://github.com/XiaoouPan/conquer
 
 Package license: GPL-3.0-only
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-conquer-feedstock/blob/main/LICENSE.txt)
+Summary: Fast and accurate convolution-type smoothed quantile regression. Implemented using Barzilai-Borwein gradient descent with a Huber regression warm start. Construct confidence intervals for regression coefficients using multiplier bootstrap.
+About r-conquer
+---------------
+
+Home: https://github.com/XiaoouPan/conquer
+
+Package license: GPL-3.0-only
 
 Summary: Fast and accurate convolution-type smoothed quantile regression. Implemented using Barzilai-Borwein gradient descent with a Huber regression warm start. Construct confidence intervals for regression coefficients using multiplier bootstrap.
 
