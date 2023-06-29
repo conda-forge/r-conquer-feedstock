@@ -40,6 +40,7 @@ requirements:
     - libgomp                      # [linux]
     - llvm-openmp                  # [osx]
     - libblas
+    - liblapack
     - r-base
     - r-caret
     - r-matrix
