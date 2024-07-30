@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
@@ -28,7 +28,9 @@ requirements:
     - r-caret                      # [build_platform != target_platform]
     - r-matrixstats                # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
+    - {{ stdlib('c') }}            # [not win]
     - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib('m2w64_c') }}      # [win]
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
@@ -36,6 +38,8 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - libgomp                      # [linux]
+    - llvm-openmp                  # [osx]
   host:
     - libgomp                      # [linux]
     - llvm-openmp                  # [osx]
